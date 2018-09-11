@@ -9,8 +9,8 @@ RUN apt-get update && \
     python python3 \
     cmake make \
     && rm -rf /var/lib/apt/lists/*
-
 ENV DEBIAN_FRONTEND dialog
+
 ENV LANG=en_US.UTF-8
 ENV LC_ALL=$LANG
 RUN sed -ie 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g' /etc/locale.gen && \
